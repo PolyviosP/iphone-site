@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import {Helmet} from "react-helmet";
-import '../css/Login.css';
+import React from 'react';
+import '../css/register.css';
+import '../css/nicepage.css';
 import '../css/navbar.css';
 import './app.js';
+import {Helmet} from 'react-helmet'
 
-
-export const Login = () => (
-  <>
-    <div className="Loginpage navbar">
+export const Register = () => (
+    <>
+    <div className="register navbar">
     <meta charSet="UTF-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign in &amp; Sign up Form</title>
-    <link rel="stylesheet" href="Login.css" />
+    <link rel="stylesheet" href="register.css" />
     <header>
       <a className="logo" href="/">
             <img src={require("../icons/logo1.png")} alt="" />
@@ -41,18 +41,18 @@ export const Login = () => (
     </header>
     <main>
     <Helmet>
-        <script src="app.js" ></script>
+        <script src="./app.js" ></script>
         <script dangerouslySetInnerHTML={{__html: 'try{Typekit.load({ async: true });}catch(e){}'}}></script>
     </Helmet>
     <div className="box">
       <div className="inner-box">
         <div className="forms-wrap">
-          <form action="Login.jsx" autoComplete="off" className="sign-in-form">
+          <form action="register.jsx" autoComplete="off" className="sign-in-form">
             <div className="heading">
               <h2>Welcome Back</h2>
-              <h6>Not registred yet?</h6>
+              <h6>You have already account? </h6>
               <a href="#" className="toggle">
-                Sign up
+                  Sign in
               </a>
             </div>
             <div className="actual-form">
@@ -64,7 +64,7 @@ export const Login = () => (
                   autoComplete="off"
                   required=""
                 />
-                <label>Name</label>
+                <label>Email</label>
               </div>
               <div className="input-wrap">
                 <input
@@ -76,15 +76,21 @@ export const Login = () => (
                 />
                 <label>Password</label>
               </div>
+              <div className="input-wrap">
+                <input
+                  type="password"
+                  minLength={4}
+                  className="input-field"
+                  autoComplete="off"
+                  required=""
+                />
+                <label>Confirm Password</label>
+              </div>
               <input
                 type="submit"
                 defaultValue="Sign In"
                 className="sign-btn"
               />
-              <p className="text">
-                Forgotten your password or you login datails?
-                <a href="#">Get help</a> signing in
-              </p>
             </div>
           </form>
         </div>
@@ -113,5 +119,6 @@ export const Login = () => (
     </div>
   </main>
   </div>
-  </>
-)
+    </>
+  )
+  

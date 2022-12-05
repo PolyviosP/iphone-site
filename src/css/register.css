@@ -8,12 +8,12 @@
   box-sizing: border-box;
 }
 
-.Loginpage body,
-.Loginpage input {
+.register body,
+.register input {
   font-family: "Poppins", sans-serif;
 }
 
-.Loginpage main {
+.register main {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
@@ -24,7 +24,7 @@
   justify-content: center;
 }
 
-.Loginpage .box {
+.register .box {
   position: relative;
   width: 100%;
   max-width: 1020px;
@@ -34,7 +34,7 @@
   box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
 }
 
-.Loginpage .inner-box {
+.register .inner-box {
   position: absolute;
   width: calc(100% - 4.1rem);
   height: calc(100% - 4.1rem);
@@ -43,7 +43,7 @@
   transform: translate(-50%, -50%);
 }
 
-.Loginpage .forms-wrap {
+.register .forms-wrap {
   position: absolute;
   height: 100%;
   width: 45%;
@@ -55,7 +55,7 @@
   transition: 0.8s ease-in-out;
 }
 
-.Loginpage form {
+.register form {
   max-width: 260px;
   width: 100%;
   margin: 0 auto;
@@ -68,42 +68,42 @@
   transition: opacity 0.02s 0.4s;
 }
 
-.Loginpage form.sign-up-form {
+.register form.sign-up-form {
   opacity: 0;
   pointer-events: none;
 }
 
-.Loginpage .logo {
+.register .logo {
   display: flex;
   align-items: center;
 }
 
-.Loginpage .logo img {
+.register .logo img {
   width: 50px;
   margin-right: 0.3rem;
 }
 
-.Loginpage .logo h4 {
+.register .logo h4 {
   font-size: 1.1rem;
   margin-top: -9px;
   letter-spacing: -0.5px;
   color: #151111;
 }
 
-.Loginpage .heading h2 {
+.register .heading h2 {
   font-size: 2.1rem;
   font-weight: 600;
   color: #151111;
 }
 
-.Loginpage .heading h6 {
+.register .heading h6 {
   color: #bababa;
   font-weight: 400;
   font-size: 0.75rem;
   display: inline;
 }
 
-.Loginpage .toggle {
+.register .toggle {
   color: #151111;
   text-decoration: none;
   font-size: 0.75rem;
@@ -111,17 +111,17 @@
   transition: 0.3s;
 }
 
-.Loginpage .toggle:hover {
+.register .toggle:hover {
   color: #8371fd;
 }
 
-.Loginpage .input-wrap {
+.register .input-wrap {
   position: relative;
   height: 37px;
   margin-bottom: 2rem;
 }
 
-.Loginpage .input-field {
+.register .input-field {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -135,7 +135,7 @@
   transition: 0.4s;
 }
 
-.Loginpage label {
+.register label {
   position: absolute;
   left: 0;
   top: 50%;
@@ -146,16 +146,16 @@
   transition: 0.4s;
 }
 
-.Loginpage .input-field.active {
+.register .input-field.active {
   border-bottom-color: #151111;
 }
 
-.Loginpage .input-field.active + label {
+.register .input-field.active + label {
   font-size: 0.75rem;
   top: -2px;
 }
 
-.Loginpage .sign-btn {
+.register .sign-btn {
   display: inline-block;
   width: 100%;
   height: 43px;
@@ -169,11 +169,11 @@
   transition: 0.3s;
 }
 
-.Loginpage .sign-btn:hover {
+.register .sign-btn:hover {
   background-color: #8371fd;
 }
 
-.Loginpage .text {
+.register .text {
   color: #bbb;
   font-size: 0.7rem;
 }
@@ -187,12 +187,12 @@
   color: #8371fd;
 }
 
-.Loginpage main.sign-up-mode form.sign-in-form {
+.register main.sign-up-mode form.sign-in-form {
   opacity: 0;
   pointer-events: none;
 }
 
-.Loginpage main.sign-up-mode form.sign-up-form {
+.register main.sign-up-mode form.sign-up-form {
   opacity: 1;
   pointer-events: all;
 }
@@ -205,7 +205,7 @@ main.sign-up-mode .carousel {
   left: 0%;
 }
 
-.Loginpage .carousel {
+.register .carousel {
   position: absolute;
   height: 100%;
   width: 55%;
@@ -220,13 +220,13 @@ main.sign-up-mode .carousel {
   transition: 0.8s ease-in-out;
 }
 
-.Loginpage .images-wrapper {
+.register .images-wrapper {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
 
-.Loginpage .image {
+.register .image {
   width: 100%;
   grid-column: 1/2;
   grid-row: 1/2;
@@ -234,37 +234,37 @@ main.sign-up-mode .carousel {
   transition: opacity 0.3s, transform 0.5s;
 }
 
-.Loginpage .img-1 {
+.register .img-1 {
   transform: translate(0, -50px);
 }
 
-.Loginpage .img-2 {
+.register .img-2 {
   transform: scale(0.4, 0.5);
 }
 
-.Loginpage .img-3 {
+.register .img-3 {
   transform: scale(0.3) rotate(-20deg);
 }
 
-.Loginpage .image.show {
+.register .image.show {
   opacity: 1;
   transform: none;
 }
 
-.Loginpage .text-slider {
+.register .text-slider {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.Loginpage .text-wrap {
+.register .text-wrap {
   max-height: 2.2rem;
   overflow: hidden;
   margin-bottom: 2.5rem;
 }
 
-.Loginpage .text-group {
+.register .text-group {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -272,19 +272,19 @@ main.sign-up-mode .carousel {
   transition: 0.5s;
 }
 
-.Loginpage .text-group h2 {
+.register .text-group h2 {
   line-height: 2.2rem;
   font-weight: 600;
   font-size: 1.6rem;
 }
 
-.Loginpage .bullets {
+.register .bullets {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.Loginpage .bullets span {
+.register .bullets span {
   display: block;
   width: 0.5rem;
   height: 0.5rem;
@@ -295,20 +295,20 @@ main.sign-up-mode .carousel {
   transition: 0.3s;
 }
 
-.Loginpage .bullets span.active {
+.register .bullets span.active {
   width: 1.1rem;
   background-color: #151111;
   border-radius: 1rem;
 }
 
 @media (max-width: 850px) {
-  .Loginpage .box {
+  .register .box {
     height: auto;
     max-width: 550px;
     overflow: hidden;
   }
 
-  .Loginpage .inner-box {
+  .register .inner-box {
     position: static;
     transform: none;
     width: revert;
@@ -316,23 +316,23 @@ main.sign-up-mode .carousel {
     padding: 2rem;
   }
 
-  .Loginpage .forms-wrap {
+  .register .forms-wrap {
     position: revert;
     width: 100%;
     height: auto;
   }
 
-  .Loginpage form {
+  .register form {
     max-width: revert;
     padding: 1.5rem 2.5rem 2rem;
     transition: transform 0.8s ease-in-out, opacity 0.45s linear;
   }
 
-  .Loginpage .heading {
+  .register .heading {
     margin: 2rem 0;
   }
 
-  .Loginpage form.sign-up-form {
+  .register form.sign-up-form {
     transform: translateX(100%);
   }
 
@@ -344,7 +344,7 @@ main.sign-up-mode .carousel {
     transform: translateX(0%);
   }
 
-  .Loginpage .carousel {
+  .register .carousel {
     position: revert;
     height: auto;
     width: 100%;
@@ -352,43 +352,42 @@ main.sign-up-mode .carousel {
     display: flex;
   }
 
-  .Loginpage .images-wrapper {
+  .register .images-wrapper {
     display: none;
   }
 
-  .Loginpage .text-slider {
+  .register .text-slider {
     width: 100%;
   }
 }
 
 @media (max-width: 530px) {
-  main {
+  .register main {
     padding: 1rem;
   }
 
-  .box {
+  .register .box {
     border-radius: 2rem;
   }
 
-  .Loginpage .inner-box {
+  .register .inner-box {
     padding: 1rem;
   }
 
-  .Loginpage .carousel {
+  .register .carousel {
     padding: 1.5rem 1rem;
     border-radius: 1.6rem;
   }
 
-  .Loginpage .text-wrap {
+  .register .text-wrap {
     margin-bottom: 1rem;
   }
 
-  .Loginpage .text-group h2 {
+  .register .text-group h2 {
     font-size: 1.2rem;
   }
 
-  .Loginpage form {
+  .register form {
     padding: 1rem 2rem 1.5rem;
   }
 }
-
