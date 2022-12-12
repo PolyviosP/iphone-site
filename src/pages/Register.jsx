@@ -1,11 +1,12 @@
 import React from 'react';
 import '../css/register.css';
-import '../css/nicepage.css';
 import '../css/navbar.css';
-import './app.js';
-import {Helmet} from 'react-helmet'
+import LR_script from './script.js';
 
-export const Register = () => (
+export default function Register() { 
+
+  {LR_script()}
+  return(
     <>
     <div className="register navbar">
     <meta charSet="UTF-8" />
@@ -40,10 +41,6 @@ export const Register = () => (
       <p className="menu cta">Menu</p>
     </header>
     <main>
-    <Helmet>
-        <script src="./app.js" ></script>
-        <script dangerouslySetInnerHTML={{__html: 'try{Typekit.load({ async: true });}catch(e){}'}}></script>
-    </Helmet>
     <div className="box">
       <div className="inner-box">
         <div className="forms-wrap">
@@ -120,5 +117,5 @@ export const Register = () => (
   </main>
   </div>
     </>
-  )
-  
+  );
+}

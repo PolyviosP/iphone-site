@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import {Helmet} from "react-helmet";
+import React, { useEffect } from 'react';
 import '../css/Login.css';
 import '../css/navbar.css';
-import './app.js';
+import LR_script from './script.js';
 
-
-export const Login = () => (
-  <>
+export default function Login() {
+  {LR_script()}
+  return (
     <div className="Loginpage navbar">
     <meta charSet="UTF-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -40,17 +39,13 @@ export const Login = () => (
       <p className="menu cta">Menu</p>
     </header>
     <main>
-    <Helmet>
-        <script src="app.js" ></script>
-        <script dangerouslySetInnerHTML={{__html: 'try{Typekit.load({ async: true });}catch(e){}'}}></script>
-    </Helmet>
     <div className="box">
       <div className="inner-box">
         <div className="forms-wrap">
           <form action="Login.jsx" autoComplete="off" className="sign-in-form">
             <div className="heading">
               <h2>Welcome Back</h2>
-              <h6>Not registred yet?</h6>
+              <h6>Not registred yet? </h6>
               <a href="#" className="toggle">
                 Sign up
               </a>
@@ -81,10 +76,6 @@ export const Login = () => (
                 defaultValue="Sign In"
                 className="sign-btn"
               />
-              <p className="text">
-                Forgotten your password or you login datails?
-                <a href="#">Get help</a> signing in
-              </p>
             </div>
           </form>
         </div>
@@ -113,5 +104,6 @@ export const Login = () => (
     </div>
   </main>
   </div>
-  </>
-)
+  );
+}
+
