@@ -7,7 +7,7 @@ import { order } from './pages/order';
 
 function App(){
   return(
-    Login()
+    Register()
   );
 }
 export default App;

@@ -1,9 +1,64 @@
-import React, { useEffect } from 'react';
+import React, { useRef, useState, useEffect, useContext } from 'react';
 import '../css/Login.css';
 import '../css/navbar.css';
+import AuthContext from "../context/AuthProvider";
+import axios from '../api/axios';
 import LR_script from './script.js';
+const LOGIN_URL = '/auth';
 
 export default function Login() {
+    const { setAuth } = useContext(AuthContext);
+    const userRef = useRef();
+    const errRef = useRef();
+    const [user, setUser] = useState('');
+    const [pwd, setPwd] = useState('');
+    const [errMsg, setErrMsg] = useState('');
+    const [success, setSuccess] = useState(false);
+
+    useEffect(() => {
+        userRef.current.focus();
+    }, [])
+
+    useEffect(() => {
+        setErrMsg('');
+    }, [user, pwd])
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setSuccess(true);
+        setUser('');
+        setPwd('');
+        console.log(user,pwd);
+        /*try {
+            const response = await axios.post(LOGIN_URL,
+                JSON.stringify({ user, pwd }),
+                {
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: true
+                }
+            );
+            console.log(JSON.stringify(response?.data));
+            //console.log(JSON.stringify(response));
+            const accessToken = response?.data?.accessToken;
+            const roles = response?.data?.roles;
+            setAuth({ user, pwd, roles, accessToken });
+            setUser('');
+            setPwd('');
+            setSuccess(true);
+        } catch (err) {
+            if (!err?.response) {
+                setErrMsg('No Server Response');
+            } else if (err.response?.status === 400) {
+                setErrMsg('Missing Username or Password');
+            } else if (err.response?.status === 401) {
+                setErrMsg('Unauthorized');
+            } else {
+                setErrMsg('Login Failed');
+            }
+            errRef.current.focus();
+        }*/
+    }
+
   {LR_script()}
   return (
     <div className="Loginpage navbar">
@@ -38,11 +93,21 @@ export default function Login() {
       
       <p className="menu cta">Menu</p>
     </header>
+    {success ? (
+                <section>
+                    <h1>You are logged in!</h1>
+                    <br />
+                    <p>
+                        <a href="#">Go to Home</a>
+                    </p>
+                </section>
+            ) : (
     <main>
+    <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
     <div className="box">
       <div className="inner-box">
         <div className="forms-wrap">
-          <form action="Login.jsx" autoComplete="off" className="sign-in-form">
+          <form action="Login.jsx" autoComplete="off" className="sign-in-form" onSubmit={handleSubmit}>
             <div className="heading">
               <h2>Welcome Back</h2>
               <h6>Not registred yet? </h6>
@@ -57,7 +122,11 @@ export default function Login() {
                   minLength={4}
                   className="input-field"
                   autoComplete="off"
-                  required=""
+                  required
+                  id="username"
+                  ref={userRef}
+                  onChange={(e) => setUser(e.target.value)}
+                  value={user}
                 />
                 <label>Name</label>
               </div>
@@ -67,7 +136,10 @@ export default function Login() {
                   minLength={4}
                   className="input-field"
                   autoComplete="off"
-                  required=""
+                  id="password"
+                  onChange={(e) => setPwd(e.target.value)}
+                  value={pwd}
+                  required
                 />
                 <label>Password</label>
               </div>
@@ -103,7 +175,8 @@ export default function Login() {
       </div>
     </div>
   </main>
+  )};
   </div>
-  );
+  )
 }
 
