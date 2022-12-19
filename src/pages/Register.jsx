@@ -201,10 +201,10 @@ export default function Register() {
           <div className="text-slider">
             <div className="text-wrap">
               <div className="text-group">
-                <h2>Create your own courses</h2>
+                {/*<h2>Create your own courses</h2>
                 <h2>Customize as you like</h2>
-                <h2>Invite students to your class</h2>
-              </div>
+                <h2>Invite students to your class</h2>*/}
+            </div>
             </div>
             <div className="bullets">
               <span className="active" data-value={1} />
