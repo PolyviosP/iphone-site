@@ -1,0 +1,30 @@
+.order .u-section-1 .u-sheet-1 {
+  min-height: 867px;
+  margin: 70px;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.order .u-section-1 .u-checkout-1 {
+  min-height: 748px;
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.order .u-section-1 .u-table-cell-1 {
+  font-weight: 700;
+}
+
+.order .u-section-1 .u-table-cell-3 {
+  font-weight: 700;
+}
+
+.order .u-section-1 .u-table-cell-4 {
+  font-weight: 700;
+}
+
+.order .u-section-1 .u-btn-1 {
+  margin-top: 20px;
+  border-radius: 25px;
+}
